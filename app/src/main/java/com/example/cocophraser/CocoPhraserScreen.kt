@@ -13,7 +13,9 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Slider
+import androidx.compose.material3.SliderDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -28,6 +30,8 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.cocophraser.ui.theme.CocoBrown
+import com.example.cocophraser.ui.theme.CocoGreen
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -113,11 +117,15 @@ fun CocoPhraserScreen() {
                 },
                 valueRange = 10f..16f, // Adjust the range as needed
                 steps = 0.1f.toInt(), // The step size
-                modifier = Modifier
-                    .width(200.dp)
-                    .padding(8.dp)
+                modifier = Modifier.width(200.dp).padding(8.dp),
+                colors = SliderDefaults.colors(
+                    activeTickColor = Color.Transparent,
+                    inactiveTickColor = Color.Transparent,
+                    inactiveTrackColor = Color.LightGray,
+                    activeTrackColor = CocoGreen,
+                    thumbColor = CocoGreen
+                )
             )
-
             Spacer(modifier = Modifier.padding(4.dp))
 
             Box(
@@ -141,11 +149,13 @@ fun CocoPhraserScreen() {
 
             Spacer(modifier = Modifier.height(40.dp))
 
-            Button(onClick = {
+            Button( colors = ButtonDefaults.buttonColors(CocoBrown), onClick = {
                 CoroutineScope(Dispatchers.Default).launch {
                     generateRandomPassword()
                 }
-            }) {
+            }
+
+            ) {
                 Spacer(modifier = Modifier.height(50.dp))
 
                 Text("Coco Passphrase")
