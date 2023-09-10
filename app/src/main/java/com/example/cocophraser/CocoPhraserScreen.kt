@@ -139,17 +139,19 @@ fun CocoPhraserScreen() {
                 )
             }
 
-            Spacer(modifier = Modifier.height(24.dp))
+            Spacer(modifier = Modifier.height(40.dp))
 
             Button(onClick = {
                 CoroutineScope(Dispatchers.Default).launch {
                     generateRandomPassword()
                 }
             }) {
-                Text("Coco Password")
+                Spacer(modifier = Modifier.height(50.dp))
+
+                Text("Coco Passphrase")
             }
 
-            Spacer(modifier = Modifier.padding(bottom = 32.dp))
+            Spacer(modifier = Modifier.padding(bottom = 26.dp))
 
             Image(
                 painter = painterResource(R.mipmap.coco_phraser_leaf_foreground), // Replace with your image resource ID
