@@ -1,6 +1,6 @@
 package com.example.cocophraser
 
-object FourThousandWords {
+object LocalWordList {
     val words = listOf(
         "abandoned", "absolutely", "accidentally", "according", "achievement", "acquainted", "adjustment",
         "advertising", "afterwards", "agriculture", "altogether", "ambitious", "americans", "ancestors",

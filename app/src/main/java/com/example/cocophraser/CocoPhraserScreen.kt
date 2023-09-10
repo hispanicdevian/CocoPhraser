@@ -1,5 +1,6 @@
 package com.example.cocophraser
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -8,6 +9,7 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
@@ -21,6 +23,9 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import kotlinx.coroutines.CoroutineScope
@@ -34,7 +39,7 @@ fun CocoPhraserScreen() {
     var desiredPasswordLength by remember { mutableStateOf(10f) }
 
     // List of dictionary words (you can replace it with your own words)
-    val dictionaryWords = FourThousandWords.words
+    val dictionaryWords = LocalWordList.words
 
     // Function to generate a random character
     fun generateRandomCharacter(): Char {
@@ -82,7 +87,17 @@ fun CocoPhraserScreen() {
             verticalArrangement = Arrangement.Center,
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            Text("Coco Phraser", fontSize = 24.sp)
+            Image(
+                painter = painterResource(R.mipmap.coco_phraser_shell_foreground), // Replace with your image resource ID
+                contentDescription = "Image content description", // Provide a description for accessibility
+                Modifier.size(120.dp)
+            )
+
+
+            Text("Coco Phraser",
+                fontSize = 28.sp,
+                fontFamily = FontFamily.Monospace,
+                fontWeight = FontWeight.Bold)
 
             Spacer(modifier = Modifier.padding(16.dp))
 
@@ -135,6 +150,12 @@ fun CocoPhraserScreen() {
             }
 
             Spacer(modifier = Modifier.padding(bottom = 32.dp))
+
+            Image(
+                painter = painterResource(R.mipmap.coco_phraser_leaf_foreground), // Replace with your image resource ID
+                contentDescription = "Image content description", // Provide a description for accessibility
+                Modifier.size(200.dp)
+            )
         }
     }
 }
