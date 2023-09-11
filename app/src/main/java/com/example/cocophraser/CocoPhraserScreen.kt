@@ -107,26 +107,7 @@ fun CocoPhraserScreen() {
 
             Text("Desired Length: ${desiredPasswordLength.toInt()}", fontSize = 16.sp)
 
-            Spacer(modifier = Modifier.padding(4.dp))
-
-            // Slider for specifying the password length
-            Slider(
-                value = desiredPasswordLength,
-                onValueChange = {
-                    desiredPasswordLength = it
-                },
-                valueRange = 10f..16f, // Adjust the range as needed
-                steps = 0.1f.toInt(), // The step size
-                modifier = Modifier.width(200.dp).padding(8.dp),
-                colors = SliderDefaults.colors(
-                    activeTickColor = Color.Transparent,
-                    inactiveTickColor = Color.Transparent,
-                    inactiveTrackColor = Color.LightGray,
-                    activeTrackColor = CocoGreen,
-                    thumbColor = CocoGreen
-                )
-            )
-            Spacer(modifier = Modifier.padding(4.dp))
+            Spacer(modifier = Modifier.padding(16.dp))
 
             Box(
                 modifier = Modifier
@@ -147,7 +128,27 @@ fun CocoPhraserScreen() {
                 )
             }
 
-            Spacer(modifier = Modifier.height(40.dp))
+            Spacer(modifier = Modifier.padding(4.dp))
+
+            // Slider for specifying the password length
+            Slider(
+                value = desiredPasswordLength,
+                onValueChange = {
+                    desiredPasswordLength = it
+                },
+                valueRange = 10f..16f, // Adjust the range as needed
+                steps = 0.1f.toInt(), // The step size
+                modifier = Modifier.width(200.dp).padding(8.dp),
+                colors = SliderDefaults.colors(
+                    activeTickColor = Color.Transparent,
+                    inactiveTickColor = Color.Transparent,
+                    inactiveTrackColor = Color.LightGray,
+                    activeTrackColor = CocoGreen,
+                    thumbColor = CocoGreen
+                )
+            )
+
+            Spacer(modifier = Modifier.height(30.dp))
 
             Button( colors = ButtonDefaults.buttonColors(CocoBrown), onClick = {
                 CoroutineScope(Dispatchers.Default).launch {
@@ -158,7 +159,7 @@ fun CocoPhraserScreen() {
             ) {
                 Spacer(modifier = Modifier.height(50.dp))
 
-                Text("Coco Passphrase")
+                Text("Generate Passphrase")
             }
 
             Spacer(modifier = Modifier.padding(bottom = 26.dp))
