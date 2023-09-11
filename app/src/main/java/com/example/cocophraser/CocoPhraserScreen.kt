@@ -44,7 +44,7 @@ fun CocoPhraserScreen(viewModel: CocoPhraserViewModel) {
             verticalArrangement = Arrangement.Center,
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            Spacer(modifier = Modifier.padding(16.dp))
+            Spacer(modifier = Modifier.padding(32.dp))
 
             Text(
                 "Coco Phraser",
@@ -52,11 +52,13 @@ fun CocoPhraserScreen(viewModel: CocoPhraserViewModel) {
                 fontFamily = FontFamily.Monospace,
                 fontWeight = FontWeight.Bold
             )
+            Spacer(modifier = Modifier.padding(6.dp))
 
             Image(
                 painter = painterResource(R.mipmap.coco_phraser_shell_foreground),
                 contentDescription = "Image content description"
             )
+            Spacer(modifier = Modifier.padding(6.dp))
 
             Text(
                 "Desired Length: ${viewModel.desiredPasswordLength}",
