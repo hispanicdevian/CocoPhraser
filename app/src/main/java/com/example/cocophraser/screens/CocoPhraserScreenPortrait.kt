@@ -1,4 +1,4 @@
-package com.example.cocophraser
+package com.example.cocophraser.screens
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.border
@@ -26,8 +26,10 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.cocophraser.R
 import com.example.cocophraser.ui.theme.CocoBrown
 import com.example.cocophraser.ui.theme.CocoGreen
+import com.example.cocophraser.viewmodel.CocoPhraserViewModel
 
 @Composable
 fun CocoPhraserPortrait(viewModel: CocoPhraserViewModel) {

@@ -1,4 +1,4 @@
-package com.example.cocophraser
+package com.example.cocophraser.model
 
 import kotlin.random.Random
 

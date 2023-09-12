@@ -1,8 +1,9 @@
-package com.example.cocophraser
+package com.example.cocophraser.viewmodel
 
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
+import com.example.cocophraser.model.CocoPhraserModel
 
 class CocoPhraserViewModel {
 

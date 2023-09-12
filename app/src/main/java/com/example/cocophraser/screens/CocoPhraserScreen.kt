@@ -1,8 +1,9 @@
-package com.example.cocophraser
+package com.example.cocophraser.screens
 
 import android.content.res.Configuration
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.platform.LocalConfiguration
+import com.example.cocophraser.viewmodel.CocoPhraserViewModel
 
 
 @Composable

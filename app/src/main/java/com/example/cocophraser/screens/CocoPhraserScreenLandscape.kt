@@ -1,4 +1,4 @@
-package com.example.cocophraser
+package com.example.cocophraser.screens
 
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
@@ -25,6 +25,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.cocophraser.ui.theme.CocoBrown
 import com.example.cocophraser.ui.theme.CocoGreen
+import com.example.cocophraser.viewmodel.CocoPhraserViewModel
 
 @Composable
 fun CocoPhraserLandscape(viewModel: CocoPhraserViewModel) {
