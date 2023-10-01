@@ -6,7 +6,7 @@ Random PassPhrase Generator App with local word list
 - Portrait & Landscape View
 - Logos Done By Me
 
-#Features:
+# Features:
 ![CocoPhraserFeaturesBBB](https://github.com/ianttta/CocoPhraser/assets/135581442/bdbf024d-b6c3-42d5-9c94-3f0d510e012f)
 
 # Demo:
